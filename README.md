@@ -21,6 +21,17 @@ This will execute the following tasks
 
 > *These steps modify files so are only executed when running in a CI environment (as detected by Cake). This allows you to execute the build locally without modifiying git tracked files.
 
+## Packages
+
+Every commit will produce an auto incrementing CI package (ie. DotNetCoreBuild.0.1.0-ci0000.nupkg) which you can configure appveyor to automatically publish to MyGet.
+
+When your ready to release a stable version, tag the repo with a stable version number (ie. 1.0.0) which will produce DotNetCoreBuild.1.0.0.nupkg. You can configure appveyor to automatically publish all stable versions to nuget (tell appveyor to only publish tagged commits to nuget).
+
+See  the following links for more info on setting up appveyor.
+
+* https://lostechies.com/jimmybogard/2016/05/24/my-oss-cicd-pipeline/
+* http://andrewlock.net/publishing-your-first-nuget-package-with-appveyor-and-myget/ 
+
 [build-badge]: https://img.shields.io/appveyor/ci/michael-wolfenden/dotnetcore-build.svg?style=flat-square
 [build]: https://ci.appveyor.com/project/michael-wolfenden/dotnetcore-build
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
