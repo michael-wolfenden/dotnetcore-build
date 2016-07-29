@@ -1,0 +1,28 @@
+﻿{
+    "version": "1.0.0-*",
+    "authors": [
+        "Michael Wolfenden"
+    ],
+    "packOptions": {
+        "owners": [
+            "Michael Wolfenden"
+        ],
+        "licenseUrl": "https://github.com/michael-wolfenden/dotnetcore-build/raw/master/LICENSE",
+        "projectUrl": "https://github.com/michael-wolfenden/dotnetcore-build",
+        "tags": [
+            "dotnetcore",
+            "build"
+        ]
+    },
+    "dependencies": {
+        "NETStandard.Library": "1.6.0"
+    },
+    "frameworks": {
+        "netstandard1.6": {}
+    },
+    "buildOptions": {
+        "compile": [
+            "../GlobalAssemblyInfo.cs"
+        ]
+    }
+}
